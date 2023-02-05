@@ -48,6 +48,7 @@ body{
     background: rgb(0, 0, 0, 0.6);
     font-size: 1.5rem;
     border-radius: 25px;
+    margin-top: 80px;
   }
   
   .buttom:hover {
@@ -56,9 +57,13 @@ body{
      transition-duration: 1000ms;
   }
 
+
+
   .game-1{
-    margin-top: 20%;
-    box-shadow: 5px 5px 5px 1px rgba(165, 126, 165, 0.347);
+    background: linear-gradient(50deg, #3d0751,#5e4741b8);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 80px;
   }
 
 

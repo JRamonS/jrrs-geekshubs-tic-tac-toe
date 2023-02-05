@@ -56,5 +56,10 @@ body{
      transition-duration: 1000ms;
   }
 
+  .game-1{
+    margin-top: 20%;
+    box-shadow: 5px 5px 5px 1px rgba(165, 126, 165, 0.347);
+  }
+
 
 

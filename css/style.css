@@ -34,13 +34,13 @@ body{
     
 
 }
-
+/* <============= Tamano Del Mensaje De Bienvenida ================================> */
  .welcom{
     font-size: 3rem;
     margin-top: 20px;
     text-align: center;
 } 
-
+/* <=============== Color y Efecto De Los Play y Help ========================> */
 .buttom {
     color: white;
     padding: 3px 20px 3px 20px;
@@ -58,7 +58,7 @@ body{
   }
 
 
-
+/* <=============== Gradient Para La Bienvenida =======================>  */
   .game-1{
     background: linear-gradient(50deg, #3d0751,#5e4741b8);
     -webkit-text-fill-color: transparent;
@@ -66,5 +66,33 @@ body{
     margin-top: 80px;
   }
 
+  /*<================ Players color y efectos ===============> */
 
 
+  .card-border-gradient-blue {
+    border-width: 0.1em;
+    border-style: solid;
+    border-image: linear-gradient(165deg, rgb(28, 214, 228) 0%, rgb(125, 0, 208) 100%) 1;
+    border-radius: 0%;
+}
+
+
+
+.bold-grad-text-blue {
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(165deg, #0066ff 0%, #5d00ff 30%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.bold-grad-text-green {
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(165deg, #f900ae 0%, #59ff00 30%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+}

@@ -1,18 +1,18 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body{
     background: linear-gradient(135deg, #603bb7,#c28bd7);
+    margin: 0;
+    padding: 0;
 }
 
 .box0{
     height: 100vh;
 }
 
-.board-container{
+.boardContainer{
     display: grid;
     grid-template-areas: 
     "1 2 3"
@@ -23,7 +23,7 @@ body{
     gap: 15px;
 }
 
-.board-container div{
+.boardContainer div{
     height: 5rem;
     width: 5rem;
     font-size: 80%;
@@ -36,7 +36,7 @@ body{
     cursor: pointer;
 }
 
-.board-container div:hover{
+.boardContainer div:hover{
     transition: 0.4s;
     box-shadow: 0 0 1em rgb(51, 8, 8);
     transform: scale(0.9);

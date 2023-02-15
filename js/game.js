@@ -5,15 +5,10 @@ const PlayersName = () => {
 }
 PlayersName ();
 
-
-//
-// let restartBtn = document.querySelector("#restartBtn")
 let boardContainer = Array.from(document.getElementsByClassName("box"));
-// let statusText = document.querySelector("#statusText");
 let turno = true;
 let playerX = 3;
 let playerO = 3;
-let currentPlayer = "X";
 let miBoard = ["","","","","","","","",""];
 console.log(miBoard)
 let running = false;
@@ -28,29 +23,19 @@ const wincombo = [
     [2, 4, 6],
   ];
    
-//   const compuebaGanador = () =>{
-
-//     if ((miBoardContainer[wincombo[0][0]] ==="x") && (miBoardContainer[wincombo[0][1]] ==="x") && 
-//         console.log(miBoardContainer[wincombo[0][0]] ==="x")
-//     (miBoardContainer[wincombo[0][2]] ==="x")){ 
-//         console.log("X Ha ganado")
-//     }
-
-//   }
-
+ 
 
   boardContainer.map(
-    (cell,) => {
+    (cell) => {
         cell.addEventListener('click', () => {
         
             if ((cell.innerHTML === "") && (playerX > 0 || playerO > 0 )){
                 cell.innerHTML = (turno) ? "X" : "O";
+                // console.log(miBoard);
                 (turno) ? playerX-- : playerO--;  
-                miBoard[cell.id] = (turno) ? "X" : "O"  
+                miBoard[cell.id] = (turno) ? "X" : "O";  
                 turno = !turno;
-                statusText.textContent = `${currentPlayer }'s turn`
-                // chengePlayer();
-                running = true;
+                checkWinner();
               
             }
         
@@ -58,29 +43,25 @@ const wincombo = [
     }
 )
 
+let result =[]
 
 const checkWinner = () => {
-   let winner = ["X", "O"];
-   let rau = "";
-
-   for(i = 0; i < winner.length; i++){
-    rau = winner [i];
-
-    if(miBoard[0] == winner && miBoard[1] == winner && miBoard[2] == winner){
-      console.log("He ganadp")
+  for(let i = 0; i < wincombo.length; i++){
+    let column = wincombo[i]
+    let column1 = boardContainer[column[0]].innerHTML
+    let column2 = boardContainer[column[1]].innerHTML
+    let column3 = boardContainer[column[2]].innerHTML
+    if(column1 === "" || column2 === "" || column3 ===""){
+      continue;
     }
-   }
+
+    if(column1 === column2 && column2 === column3){
+      console.log("ha ganado")
+      result.push().innerHTML
+    }
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

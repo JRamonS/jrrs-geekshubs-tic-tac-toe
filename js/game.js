@@ -42,7 +42,7 @@ const wincombo = [
 //combinación ganadora
 let result =[]
 
-const checkWinner = () => {
+const checkWinner = (victoria) => {
   for(let i = 0; i < wincombo.length; i++){
     let column = wincombo[i]
     let column1 = boardContainer[column[0]].innerHTML
@@ -54,14 +54,21 @@ const checkWinner = () => {
 
     if(column1 === column2 && column2 === column3){
       window.location.href = "../pages/winner.html"
-      result.push().innerHTML
-      return;
-
+      // result.push(column1).innerHTML
+      return (victoria, ganador());
     }
   }
 
 }
 
+ let ganador = () => {
+
+  if (result[0] === "X"){
+    sessionStorage.setItem("ganador" , sessionStorage.getItem("name1"));
+  }else {
+    sessionStorage.setItem("ganador" , sessionStorage.getItem("name2"));
+  }
+  }
  
 
 

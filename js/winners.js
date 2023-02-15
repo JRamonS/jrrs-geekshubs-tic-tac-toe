@@ -1,4 +1,6 @@
-document.getElementById("Guest1").innerHTML = sessionStorage.getItem("name1")
-document.getElementById("Guest2").innerHTML = sessionStorage.getItem("name2")
+let test = sessionStorage.getItem("ganador")
+
+document.getElementById("ganador").innerHTML = (JSON.stringify(test));
+
 
 

@@ -31,8 +31,9 @@ const wincombo = [
                 // console.log(miBoard);
                 (turno) ? playerX-- : playerO--;  
                 miBoard[cell.id] = (turno) ? "X" : "O";  
-                turno = !turno;
                 checkWinner();
+                turno = !turno;
+               
               
             }
         
@@ -60,13 +61,14 @@ const checkWinner = (victoria) => {
   }
 
 }
+//imprime por pantalla el ganador 
+let ganador = () => {
 
- let ganador = () => {
-
-  if (result[0] === "X"){
-    sessionStorage.setItem("ganador" , sessionStorage.getItem("name1"));
+  if (result[0] !== "X"){
+    sessionStorage.setItem("ganador", sessionStorage.getItem("name1"));
   }else {
     sessionStorage.setItem("ganador" , sessionStorage.getItem("name2"));
+    console.log(ganador);
   }
   }
  

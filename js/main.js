@@ -14,15 +14,3 @@ const playGame = () => {
         alert("Tiene que introducir el nombre")
     }
 }
-
-// botonAceptarPlayer1.addEventListener("click", () => {
-//     if (nombrePlayer1.value === "" || nombrePlayer1.value.length < 3) {
-//         document.getElementById("pMensaje1").innerHTML = ("Escribe un nombre que contenga <br> entre 3 y 12 caracteres")
-//         document.getElementById("namePl1").value = ("");
-//     } else {
-//         sessionStorage.setItem("nombreJugador1", JSON.stringify(nombrePlayer1.value));
-//         document.getElementById("labelNombre1").innerHTML = (nombrePlayer1.value);
-//         document.getElementById("namePl1").value = ("");
-//         comprobarCampos();
-//     }
-// });

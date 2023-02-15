@@ -4,7 +4,6 @@ const PlayersName = () => {
     document.getElementById("Guest2").innerHTML = sessionStorage.getItem("name2")
 }
 PlayersName ();
-
 let boardContainer = Array.from(document.getElementsByClassName("box"));
 let turno = true;
 let playerX = 3;
@@ -22,9 +21,7 @@ const wincombo = [
     [0, 4, 8],
     [2, 4, 6],
   ];
-   
- 
-
+   //Mapeo para conseguir el que se marque la X o o y cambio de turno
   boardContainer.map(
     (cell) => {
         cell.addEventListener('click', () => {
@@ -42,7 +39,7 @@ const wincombo = [
         })
     }
 )
-
+//combinación ganadora
 let result =[]
 
 const checkWinner = () => {
@@ -56,17 +53,16 @@ const checkWinner = () => {
     }
 
     if(column1 === column2 && column2 === column3){
-      console.log("ha ganado")
+      window.location.href = "../pages/winner.html"
       result.push().innerHTML
+      return;
+
     }
   }
 
 }
 
-
-
-
-
+ 
 
 
 

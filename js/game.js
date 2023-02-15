@@ -1,26 +1,22 @@
 //Recuperando los nombres de players
-
 const PlayersName = () => {
     document.getElementById("Guest1").innerHTML = sessionStorage.getItem("name1")
     document.getElementById("Guest2").innerHTML = sessionStorage.getItem("name2")
-
 }
-
 PlayersName ();
 
 
 //
-
-let running = true;
+// let restartBtn = document.querySelector("#restartBtn")
+let boardContainer = Array.from(document.getElementsByClassName("box"));
+// let statusText = document.querySelector("#statusText");
 let turno = true;
 let playerX = 3;
 let playerO = 3;
-// let currentPlayer = true;
-let boardContainer = Array.from(document.getElementsByClassName("box"));
-
-let miBoardContainer = ["","","","","","","","",""];
-console.log(miBoardContainer)
-
+let currentPlayer = "X";
+let miBoard = ["","","","","","","","",""];
+console.log(miBoard)
+let running = false;
 const wincombo = [
     [0, 1, 2],
     [3, 4, 5],
@@ -46,45 +42,67 @@ const wincombo = [
   boardContainer.map(
     (cell,) => {
         cell.addEventListener('click', () => {
-
+        
             if ((cell.innerHTML === "") && (playerX > 0 || playerO > 0 )){
                 cell.innerHTML = (turno) ? "X" : "O";
-                // console.log(cell);
-                // (turno) ? playerX-- : playerO--;
-
                 (turno) ? playerX-- : playerO--;  
-                miBoardContainer[cell.id] = (turno) ? "X" : "O";
-                // compuebaGanador();
+                miBoard[cell.id] = (turno) ? "X" : "O"  
                 turno = !turno;
+                statusText.textContent = `${currentPlayer }'s turn`
+                // chengePlayer();
+                running = true;
+              
             }
         
         })
     }
 )
 
+
 const checkWinner = () => {
-    let roundWon = false;
+   let winner = ["X", "O"];
+   let rau = "";
 
-    for(let i = 0; i < wincombo.length; i++){
+   for(i = 0; i < winner.length; i++){
+    rau = winner [i];
 
-        let condition = wincombo[i];
-        let boxA = miBoardContainer[condition[0]];
-        let boxB = miBoardContainer[condition[1]];
-        let boxC = miBoardContainer[condition[2]];
-
-        if(boxA == "" || boxB == "" || boxC == ""){
-            continue;
-        }
-        if(boxA == boxB && boxB == boxC){
-            roundWon = true;
-            break;
-        }
-        console.log(roundWon);
+    if(miBoard[0] == winner && miBoard[1] == winner && miBoard[2] == winner){
+      console.log("He ganadp")
     }
+   }
+}
 
-    if (roundWon){
-        status
-    }
-    }
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

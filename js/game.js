@@ -4,12 +4,13 @@ const PlayersName = () => {
     document.getElementById("Guest2").innerHTML = sessionStorage.getItem("name2")
 }
 PlayersName ();
+
+// Creo las variables, mi tabla, y la tabla de la combinación ganadora
 let boardContainer = Array.from(document.getElementsByClassName("box"));
 let turno = true;
 let playerX = 3;
 let playerO = 3;
 let miBoard = ["","","","","","","","",""];
-console.log(miBoard)
 let running = false;
 const wincombo = [
     [0, 1, 2],
@@ -28,7 +29,6 @@ const wincombo = [
         
             if ((cell.innerHTML === "") && (playerX > 0 || playerO > 0 )){
                 cell.innerHTML = (turno) ? "X" : "O";
-                // console.log(miBoard);
                 (turno) ? playerX-- : playerO--;  
                 miBoard[cell.id] = (turno) ? "X" : "O";  
                 checkWinner();
@@ -61,7 +61,7 @@ const checkWinner = (victoria) => {
   }
 
 }
-//imprime por pantalla el ganador 
+//colecciono los nombre de game para imprimirlo en winner
 let ganador = () => {
 
   if (result[0] !== "X"){
@@ -72,6 +72,8 @@ let ganador = () => {
   }
   }
  
+
+
 
 
 

@@ -1,16 +1,29 @@
+:root{
+ --clr-lightBlue: 178 60% 48%;
+  --clr-lightBlueHover: 178 75% 65%;
+  --clr-orange: 39 88% 58%;
+  --clr-orangeHover: 39 100% 69%;
+  --clr-darkNavy: 202 32% 15%;
+  --clr-navy: 199 35% 19%;
+  --clr-silver: 198 23% 72%;
+  --clr-silverHover: 197 33% 89%;
+}
+
 *{
     box-sizing: border-box;
 }
+
 /*  <================= Tres en Rayas Tablero =========================> */
 body{
-    background: linear-gradient(135deg, #603bb7,#c28bd7);
+    background-color: hsl(var(--clr-darkNavy));
     margin: 0;
     padding: 0;
-}
-
-.box0{
     height: 100vh;
 }
+
+/* .box0{
+    height: 100vh;
+} */
 
 #tablero{
     display: grid;
@@ -24,10 +37,10 @@ body{
     font-family: "Permanet Marker", cursive;
 }
 
-#statusText{
+/* #statusText{
     text-align: center;
     margin-top: 2em;
-}
+} */
 
 .box{
     height: 5rem;
@@ -38,7 +51,8 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    background-color: white;
+    background-color:hsl(var(--clr-navy)) ;
+    box-shadow: inset 0px -8px 0px #10212a;
     font-size: 50px;
     cursor: pointer;
 }
@@ -63,14 +77,14 @@ body{
     border: 1px solid orange;
     background: rgb(0, 0, 0, 0.6);
     font-size: 1.5rem;
-    border-radius: 25px;
+    border-radius: 15px;
     margin-top: 80px;
   }
   
   .buttom:hover {
-     background-color: rgba(1, 1, 213, 0.686);
-     transform: scale(0.9);
-     transition-duration: 1000ms;
+    background-color: hsl(var(--clr-orangeHover));
+    transform: scale(0.9);
+    transition-duration: 1000ms;
   }
 
 
@@ -90,6 +104,7 @@ body{
     border-style: solid;
     border-image: linear-gradient(165deg, rgb(28, 214, 228) 0%, rgb(125, 0, 208) 100%) 1;
     border-radius: 0%;
+    background-color: hsl(var(--clr-lightBlue));
 }
 
 
@@ -101,6 +116,7 @@ body{
     background-size: 100%;
     -webkit-background-clip: text;
     background-clip: text;
+    /* background-color: hsl(var(--clr-lightBlue)); */
 }
 
 .bold-grad-text-green {

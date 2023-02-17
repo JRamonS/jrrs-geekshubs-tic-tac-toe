@@ -1,9 +1,8 @@
 //Recuperando los nombres de players
-const PlayersName = () => {
     document.getElementById("Guest1").innerHTML = sessionStorage.getItem("name1")
     document.getElementById("Guest2").innerHTML = sessionStorage.getItem("name2")
-}
-PlayersName ();
+
+
 
 // Creo las variables, mi tabla, y la tabla de la combinación ganadora
 let boardContainer = Array.from(document.getElementsByClassName("box"));
@@ -65,10 +64,10 @@ const checkWinner = (victoria) => {
 let ganador = () => {
 
   if (result[0] !== "X"){
-    sessionStorage.setItem("ganador", sessionStorage.getItem("name1"));
+    sessionStorage.setItem('ganador', sessionStorage.getItem("name1"));
+
   }else {
-    sessionStorage.setItem("ganador" , sessionStorage.getItem("name2"));
-    console.log(ganador);
+    sessionStorage.setItem('ganador' , sessionStorage.getItem("name2"));
   }
   }
  

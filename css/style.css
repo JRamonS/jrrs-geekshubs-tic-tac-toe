@@ -19,11 +19,8 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
+    font-family: 'Julee', cursive;
 }
-
-/* .box0{
-    height: 100vh;
-} */
 
 #tablero{
     display: grid;
@@ -37,10 +34,10 @@ body{
     font-family: "Permanet Marker", cursive;
 }
 
-/* #statusText{
+#statusText{
     text-align: center;
     margin-top: 2em;
-} */
+}
 
 .box{
     height: 5rem;
@@ -105,9 +102,12 @@ body{
     border-image: linear-gradient(165deg, rgb(28, 214, 228) 0%, rgb(125, 0, 208) 100%) 1;
     border-radius: 0%;
     background-color: hsl(var(--clr-lightBlue));
+    
 }
 
-
+.card-border-gradient-blue1{
+    background-color: hsl(var(--clr-orange));
+}
 
 .bold-grad-text-blue {
     font-weight: 900;
@@ -116,7 +116,6 @@ body{
     background-size: 100%;
     -webkit-background-clip: text;
     background-clip: text;
-    /* background-color: hsl(var(--clr-lightBlue)); */
 }
 
 .bold-grad-text-green {
@@ -129,19 +128,11 @@ body{
     text-transform: uppercase;
 }
 
-/* <================== Winner message =============>*/
-
-.message{
-    display: none;
-    width: 200px;
-    top: 120px;
-    background-color: rgba(205, 133, 63, 0.8);
-    position: absolute;
-    left: 2em;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;color: white;
-    font-size: 2em;
-
+.warnig{
+    width: 5rem;
+    text-align: center;
+    margin: auto;
+    color: red;
+    padding: 1.5rem;
 }
 

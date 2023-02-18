@@ -75,13 +75,12 @@ body{
 } 
 /* <=============== Color y Efecto De Los Play y Help ========================> */
 .buttom {
-    color: white;
     padding: 3px 20px 3px 20px;
     border: 1px solid orange;
     background: rgb(0, 0, 0, 0.6);
     font-size: 1.5rem;
     border-radius: 15px;
-    margin-top: 80px;
+    margin-top: 70px;
   }
   
   .buttom:hover {

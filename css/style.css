@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 
-/*  <================= Tres en Rayas Tablero =========================> */
+/*  <================= Tres en Raya Tablero y color de jugadores =========================> */
 body{
     background-color: hsl(var(--clr-darkNavy));
     margin: 0;
@@ -22,9 +22,9 @@ body{
     font-family: 'Julee', cursive;
 }
 
-.bre{
+/* .bre{
     margin-top: 2rem;
-}
+} */
 
 #tablero{
     display: grid;
@@ -32,8 +32,6 @@ body{
     "1 2 3"
     "4 5 6"
     "7 8 9";
-    /* justify-content: center;
-    align-items: center; */
     gap: 15px;
     font-family: "Permanet Marker", cursive;
 }
@@ -56,9 +54,17 @@ body{
 
 .box:hover{
     transition: 0.4s;
-    box-shadow: 0 0 1em rgb(51, 8, 8);
+    /* box-shadow: 0 0 1em rgb(51, 8, 8); */
     transform: scale(0.9);
      transition-duration: 1000ms;
+}
+
+#Guest1{
+    color: hsl(var(--clr-lightBlue));
+}
+
+#Guest2{
+    color: hsl(var(--clr-orange));
 }
 
 /* <============= Tamaño Del Mensaje De Bienvenida ================================> */
@@ -84,6 +90,10 @@ body{
     transition-duration: 1000ms;
   }
 
+  .buttom2:hover{
+    background-color: hsl(var(--clr-lightBlueHover));
+  }
+
 
 /* <=============== Colores y fuentes Para La Bienvenida =======================>  */
 
@@ -104,6 +114,7 @@ body{
     
     .game-3{
         color: hsl(var(--clr-silver));
+        
      
     }
     
@@ -120,15 +131,13 @@ body{
 
 
   .card-border-gradient-blue {
-    border-width: 0.1em;
-    border-style: solid;
-    border-image: linear-gradient(165deg, rgb(28, 214, 228) 0%, rgb(125, 0, 208) 100%) 1;
-    border-radius: 0%;
+    border-radius: 15px;
     background-color: hsl(var(--clr-lightBlue));
     
 }
 
 .card-border-gradient-blue1{
+    border-radius: 15px;
     background-color: hsl(var(--clr-orange));
 }
 
@@ -150,15 +159,6 @@ body{
     background-clip: text;
     text-transform: uppercase;
 }
-
-
-.messages{
-    color: #0066ff;
-    text-align: center;
-}
-
-
-
 
 
 

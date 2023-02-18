@@ -18,8 +18,12 @@ body{
     background-color: hsl(var(--clr-darkNavy));
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100%;
     font-family: 'Julee', cursive;
+}
+
+.bre{
+    margin-top: 2rem;
 }
 
 #tablero{
@@ -28,16 +32,12 @@ body{
     "1 2 3"
     "4 5 6"
     "7 8 9";
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     gap: 15px;
     font-family: "Permanet Marker", cursive;
 }
 
-#statusText{
-    text-align: center;
-    margin-top: 2em;
-}
 
 .box{
     height: 5rem;
@@ -85,13 +85,36 @@ body{
   }
 
 
-/* <=============== Gradient Para La Bienvenida =======================>  */
-  .game-1{
-    background: linear-gradient(50deg, #3d0751,#5e4741b8);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    margin-top: 80px;
-  }
+/* <=============== Colores y fuentes Para La Bienvenida =======================>  */
+
+.box3{
+    color: hsl(var(--clr-orange));
+    
+    }
+    
+    .game-1{
+        font-family: 'Noto Serif', serif;
+    }
+    
+    .game-2{
+        color: hsl(var(--clr-lightBlue));
+        
+    }
+    
+    
+    .game-3{
+        color: hsl(var(--clr-silver));
+     
+    }
+    
+    .game-4{
+        color: hsl(var(--clr-orange));
+    }
+    
+    .game-5{
+        color: hsl(var(--clr-lightBlue));
+    }
+ 
 
   /*<================ Players select color y efectos ===============> */
 
@@ -128,11 +151,15 @@ body{
     text-transform: uppercase;
 }
 
-.warnig{
-    width: 5rem;
+
+.messages{
+    color: #0066ff;
     text-align: center;
-    margin: auto;
-    color: red;
-    padding: 1.5rem;
 }
+
+
+
+
+
+
 

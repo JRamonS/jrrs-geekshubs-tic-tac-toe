@@ -166,23 +166,9 @@ body{
     text-transform: uppercase;
 }
 
-.x-hover:hover::after {
-    content: "X";
-    opacity: 0.4;
-}
 
-.o-hover:hover::after {
-    content: "O";
-    opacity: 0.4;
-}
 
-.wannigs{
-    width: 3em;
-    align-items: center;
-    margin: auto;
-    color:hsl(var(--clr-orange));;
-    padding: 1.5rem;
-}
+
 
 
 

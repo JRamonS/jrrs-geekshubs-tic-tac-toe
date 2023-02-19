@@ -10,7 +10,6 @@ let turno = true;
 let playerX = 3;
 let playerO = 3;
 let miBoard = ["","","","","","","","",""];
-let running = false;
 const wincombo = [
     [0, 1, 2],
     [3, 4, 5],
@@ -21,24 +20,41 @@ const wincombo = [
     [0, 4, 8],
     [2, 4, 6],
   ];
-   //Mapeo para conseguir el que se marque la X o o y cambio de turno
+   //Mapeo para conseguir que se marque la X o O y cambio de turno
   boardContainer.map(
-    (cell) => {
-        cell.addEventListener('click', () => {
+    (box) => {
+        box.addEventListener('click', () => {
         
-            if ((cell.innerHTML === "") && (playerX > 0 || playerO > 0 )){
-                cell.innerHTML = (turno) ? "X" : "O";
+            if ((box.innerHTML === "") && (playerX > 0 || playerO > 0 )){
+                box.innerHTML = (turno) ? "X" : "O";
                 (turno) ? playerX-- : playerO--;  
-                miBoard[cell.id] = (turno) ? "X" : "O";  
+                miBoard[box.id] = (turno) ? "X" : "O";
                 checkWinner();
                 turno = !turno;
-               
               
             }
         
         })
     }
 )
+
+
+function hoverIn (){
+  let currentClass = turno === "playerX" ? "X" : "O";
+  // if((box.innerHTML === "") && (playerX > 0 || playerO > 0)){
+  //   box.innerHTML = (turno) ? "X" : "O";
+    this.classList.add(`${currentClass}-hover`);
+  
+}
+
+function hoverOut (){
+  if(this.classList.contains("x-hover") || this.classList.contains("o-hover")){
+    this.classList.remove("x-hover")
+    this.classList.remove("o-hover")
+  }
+}
+
+
 //combinación ganadora
 let result =[]
 
@@ -70,6 +86,8 @@ let ganador = () => {
     sessionStorage.setItem('ganador' , sessionStorage.getItem("name2"));
   }
   }
+
+
  
 
 

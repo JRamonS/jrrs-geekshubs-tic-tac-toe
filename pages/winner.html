@@ -4,14 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Winner</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div class="messages"><h1> You had your minute in the sun! WELL DONE</h1></div>
-</body>
 
-<h2 id="winning" class="messages"></h2>
+    <div class="container-fluid">
+        <div class="row">
+            <!--<======================= Mensaje de Ganador ===========================> -->
+            <div class="col-sm-12 d-flex justify-content-center mt-3">
+                <div class="fs-1 fw-bold "><span class="game-2 game-1">WELL DONE</span><h2 id="winning" class="d-flex justify-content-center mt-5"></h2></div>
+            </div>
+
+            <div class="col-sm-12 d-flex justify-content-center mt-5">
+                <div class="fs-1 fw-bold "><span class="game-3">YOU HAVE</span></div>
+            </div>
+
+            <div class="col-sm-12 d-flex justify-content-center mt-5">
+                <div class="fs-1 fw-bold "><span class="game-4">WON THE</span></div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class=" fs-1 fw-bold mt-5"><span class="game-3 game-1">TIC</span> <span class="game-4 game-1">TAC</span> <span class="game-5 game-1">TOE</span></div>
+            </div>
+            <!-- <======================= Botón de reinicio al juego ==============================> -->
+            <div class="col-sm-12 col-lg- d-flex justify-content-center">
+                <div class="buttom"><a class="text-white nav-link fst-italic" href="../pages/game.html"><span class="game-2 game-1">NEW GAME</span></a></div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
 
 <script src="../js/winners.js"></script>
 </html>

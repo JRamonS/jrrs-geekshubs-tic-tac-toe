@@ -18,13 +18,10 @@ body{
     background-color: hsl(var(--clr-darkNavy));
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100vh;
     font-family: 'Julee', cursive;
 }
 
-/* .bre{
-    margin-top: 2rem;
-} */
 
 #tablero{
     display: grid;
@@ -50,20 +47,25 @@ body{
     box-shadow: inset 0px -8px 0px #10212a;
     font-size: 50px;
     cursor: pointer;
+    color:  hsl(var(--clr-orange));
 }
 
 .box:hover{
     transition: 0.4s;
-    /* box-shadow: 0 0 1em rgb(51, 8, 8); */
     transform: scale(0.9);
      transition-duration: 1000ms;
 }
 
 #Guest1{
     color: hsl(var(--clr-lightBlue));
+
 }
 
 #Guest2{
+    color: hsl(var(--clr-orange));
+}
+
+#winning{
     color: hsl(var(--clr-orange));
 }
 
@@ -92,6 +94,11 @@ body{
   .buttom2:hover{
     background-color: hsl(var(--clr-lightBlueHover));
   }
+/* ,=============== Altura y ancho de help =============================> */
+  .rules{
+    width: 80vw;
+    height: 100vh;
+}
 
 
 /* <=============== Colores y fuentes Para La Bienvenida =======================>  */
@@ -157,6 +164,24 @@ body{
     -webkit-background-clip: text;
     background-clip: text;
     text-transform: uppercase;
+}
+
+.x-hover:hover::after {
+    content: "X";
+    opacity: 0.4;
+}
+
+.o-hover:hover::after {
+    content: "O";
+    opacity: 0.4;
+}
+
+.wannigs{
+    width: 3em;
+    align-items: center;
+    margin: auto;
+    color:hsl(var(--clr-orange));;
+    padding: 1.5rem;
 }
 
 

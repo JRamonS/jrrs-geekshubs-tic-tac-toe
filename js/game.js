@@ -39,22 +39,6 @@ const wincombo = [
 )
 
 
-function hoverIn (){
-  let currentClass = turno === "playerX" ? "X" : "O";
-  // if((box.innerHTML === "") && (playerX > 0 || playerO > 0)){
-  //   box.innerHTML = (turno) ? "X" : "O";
-    this.classList.add(`${currentClass}-hover`);
-  
-}
-
-function hoverOut (){
-  if(this.classList.contains("x-hover") || this.classList.contains("o-hover")){
-    this.classList.remove("x-hover")
-    this.classList.remove("o-hover")
-  }
-}
-
-
 //combinación ganadora
 let result =[]
 

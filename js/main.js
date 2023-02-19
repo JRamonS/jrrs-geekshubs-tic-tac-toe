@@ -10,7 +10,6 @@ const playGame = () => {
         return;
     }    
     window.open("../pages/game.html","_self");
-    // window.location.href ="../pages/game.html";
 }
 
 

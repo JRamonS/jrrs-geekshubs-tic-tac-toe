@@ -54,7 +54,7 @@ const checkWinner = (victoria) => {
 
     if(column1 === column2 && column2 === column3){
       window.location.href = "../pages/winner.html"
-      // result.push(column1).innerHTML
+      result.push(column1).innerHTML
       return (victoria, ganador());
     }
   }
@@ -63,12 +63,13 @@ const checkWinner = (victoria) => {
 //colecciono los nombre de game para imprimirlo en winner
 let ganador = () => {
 
-  if (result[0] !== "X"){
+  if (result[0] ===  "X"){
     sessionStorage.setItem('ganador', sessionStorage.getItem("name1"));
 
   }else {
-    sessionStorage.setItem('ganador' , sessionStorage.getItem("name2"));
+    sessionStorage.setItem('ganador', sessionStorage.getItem("name2"));
   }
+
   }
 
 
